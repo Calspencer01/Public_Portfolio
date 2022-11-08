@@ -1,0 +1,7 @@
+
+\section{Conclusions}
+\label{sec:concl}
+
+Our model sought to predict the rating of wine given eleven quantitative features. While our model accuracy varied depending on the type of wine being rated and the regression model we used, overall it struggled to forecast the new ratings in our testing data. For a model to recreate the qualitative judgements that determined the rating scores, we hypothesized that the eleven features would assist the model in making a more informed decision. Instead, we found that our  lasso regression performed best specifically because it minimized the effect of extra, uncorrelated features. \\\\
+To continue this work, we recommend introducing a controlled amount of random variability into the coefficients of the best fitting regression model, then plotting the mean squared error of each model against this controlled variability. This plot should show a positive relationship between the variability of the model’s coefficients, and the mean squared error of each model. This relationship would imply that models with coefficients different from ours are less accurate. If this variability and model mean squared error is not positively correlated, our regression model might not have reached the correct relative minimum during descent to accurately model this data. 
+

@@ -1,0 +1,32 @@
+{
+	"tasks":[{
+		"num":3,
+		"phase":0,
+		"period":11,
+		"c":3,
+		"deadline":9
+	},
+        {
+        "num":2,
+        "phase":2,
+        "period":10,
+        "c":2,
+        "deadline":10
+    },
+        {
+		"num":1,
+		"phase":1,
+		"period":9,
+		"c":1,
+		"deadline":7
+	},
+        {
+		"num":0,
+		"phase":3,
+		"period":8,
+		"c":1,
+		"deadline":8
+        }
+	],
+	"max_t":25
+}

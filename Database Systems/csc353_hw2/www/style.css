@@ -1,0 +1,12 @@
+.title {
+    font-size: 24px;
+}
+.authors {
+    font-size: 16px;
+}
+.data_table .left_table {
+    float: left;
+}
+.data_table .right_table {
+    float: left;
+}
