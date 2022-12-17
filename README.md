@@ -58,10 +58,12 @@ Calvin Spencer's Portfolio
 ## ML
 - CNNs
     - Dataset not included; grab URL
-<img width="492" alt="ML_final" src="https://user-images.githubusercontent.com/60395848/208214996-c34781da-009d-4f8e-9e59-d62133db0a38.png">
+[ML CNN.pdf](https://github.com/Calspencer01/Public_Portfolio/files/10250438/ML.CNN.pdf)
+
 
 - Logistic Regression
-<img width="500" alt="ML_wine" src="https://user-images.githubusercontent.com/60395848/208215020-7d23a106-2ca5-4003-9ebf-b38b3b61c2c7.png">
+[ML Regression.pdf](https://github.com/Calspencer01/Public_Portfolio/files/10250440/ML.Regression.pdf)
+
 
 ## Standards Based Gradebook
 <img width="897" alt="Gradebook" src="https://user-images.githubusercontent.com/60395848/208214982-99dea796-8551-4f3a-a97b-20bb4067834b.png">
