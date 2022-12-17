@@ -11,13 +11,13 @@ Calvin Spencer's Portfolio
 - Logisim
 ## Covid Tracker (D3.js)
 - Time Series Choropleth
-<img width="500" alt="Covid-tracker" src="https://user-images.githubusercontent.com/60395848/208214951-baa9f51f-9731-4559-b6ec-905a0359df9b.png">
+<img width="700" alt="Covid-tracker" src="https://user-images.githubusercontent.com/60395848/208214951-baa9f51f-9731-4559-b6ec-905a0359df9b.png">
 
 - Line charts
-<img width="500" alt="Screen Shot 2022-12-16 at 8 11 34 PM" src="https://user-images.githubusercontent.com/60395848/208215508-4180f545-7b2f-46dd-980d-9de526418006.png">
+<img width="700" alt="Screen Shot 2022-12-16 at 8 11 34 PM" src="https://user-images.githubusercontent.com/60395848/208215508-4180f545-7b2f-46dd-980d-9de526418006.png">
 
 - Scatterplot
-<img width="500" alt="Scatterplot" src="https://user-images.githubusercontent.com/60395848/208215411-f58cf7f8-fe45-4a92-860c-6d012e361a23.png">
+<img width="700" alt="Scatterplot" src="https://user-images.githubusercontent.com/60395848/208215411-f58cf7f8-fe45-4a92-860c-6d012e361a23.png">
 
 ## Data Structures (Java)
 - Class activities
@@ -46,15 +46,15 @@ Calvin Spencer's Portfolio
 
 
 ## COVID-19 Testing Dashboard (R Shiny)
-<img width="500" alt="CV-19 dashboard" src="https://user-images.githubusercontent.com/60395848/208214964-f2a253e3-9890-4c98-a7a1-06a2f3f4e8e9.png">
+<img width="700" alt="CV-19 dashboard" src="https://user-images.githubusercontent.com/60395848/208214964-f2a253e3-9890-4c98-a7a1-06a2f3f4e8e9.png">
 
 ## Evolution Simulator (Java)
 ![](https://github.com/Calspencer01/Public_Portfolio/blob/master/Evolution%20Simulator%20(Java)/Ev%20Sim.gif)
 
 
 ## Forecasting (R)
-<img width="500" alt="Forecasting1" src="https://user-images.githubusercontent.com/60395848/208214971-9d0c1e47-8476-4e5b-9898-89332c2dd590.png">
-<img width="500" alt="Forecasting2" src="https://user-images.githubusercontent.com/60395848/208214972-603493db-6e9c-4e62-a479-a4c1c3ef835c.png">
+<img width="700" alt="Forecasting1" src="https://user-images.githubusercontent.com/60395848/208214971-9d0c1e47-8476-4e5b-9898-89332c2dd590.png">
+<img width="700" alt="Forecasting2" src="https://user-images.githubusercontent.com/60395848/208214972-603493db-6e9c-4e62-a479-a4c1c3ef835c.png">
 
 ## ML (Python)
 - CNNs
@@ -67,7 +67,7 @@ Dataset not included; grab URL
 
 
 ## Standards Based Gradebook (R Shiny)
-<img width="500" alt="Gradebook" src="https://user-images.githubusercontent.com/60395848/208214982-99dea796-8551-4f3a-a97b-20bb4067834b.png">
+<img width="700" alt="Gradebook" src="https://user-images.githubusercontent.com/60395848/208214982-99dea796-8551-4f3a-a97b-20bb4067834b.png">
 
 ## Yukon Salmon (D3.js)
-<img width="500" alt="Yukon" src="https://user-images.githubusercontent.com/60395848/208215032-3134bdb0-6fb7-40f0-b90c-6fff0bbd6457.png">
+<img width="700" alt="Yukon" src="https://user-images.githubusercontent.com/60395848/208215032-3134bdb0-6fb7-40f0-b90c-6fff0bbd6457.png">
