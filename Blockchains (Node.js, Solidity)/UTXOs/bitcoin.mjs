@@ -23,101 +23,12 @@ class Store {
 	}
 
 	insert(tx) {
-		// ----- 6) Instead of printing, return whether the verification worked.
-		// 			Also, only insert in the map if the verification indeed worked.
-		
-		// Store verification result
-		let accepted = this.verify(tx)
-		if (accepted){
-			// Insert in map
-			this.txMap.set(tx.id, tx)
-			console.log("Accepted")
-		} 
-		else {
-			// Do not insert in map
-			console.log("Not Accepted")
-		}
-		return accepted
+		this.txMap.set(tx.id, tx)
+
+		console.log("Accepted:", this.verify(tx))
 	}
 
 	verify(tx) {
-		// ----- 1) Install the secp256k1 package using [npm install secp256k1]
-		
-		let totalInput = 0
-		let totalOutput = 0
-
-		// For each input of the transaction
-		for(var i = 0; i < tx.vin.length; i++) {
-			let vtx = tx.vin[i]
-
-			// ----- 2) Verify that the source UTXO exists, and that the value of the input matches the UTXO value
-			
-			// Break if transaction doesn't exist in txMap
-			if (typeof this.txMap.get(vtx.id) == "undefined"){
-				return false
-			}
-				
-			// Store source transaction in txMap using vtx.id
-			let source_tx = this.txMap.get(vtx.id)
-			
-			// Find in source output in vout using vtx.offset
-			let source_utxo = source_tx.vout[vtx.offset]
-			
-			// Check if utxo is found
-			if (typeof source_utxo == "undefined"){
-				return false 
-			} 
-			
-			// Compare values if utxo is not undefined
-			if (source_utxo.value != vtx.value){
-				// Incorrect values
-				return false
-			}
-
-			// ----- 3) Zero the signature field of the copy, and verify that the signature matches
-			
-			// Store signature
-			let signatureObject  = vtx.signature
-
-			// Zero signature field
-			vtx.signature = 0
-
-			// Get public key of source utxo
-			let pubKey = source_utxo.pubkey
-			
-			// Verify signature 
-			let result = btc.verifySignatureMessage(pubKey, signatureObject, vtx)
-
-			// False result if signature cannot be verified
-			if (!result){
-				return false
-			}
-
-			// ----- 4) Restore the signature field to the old value
-			vtx.signature = signatureObject
-
-			// Add the value of the input to the sum of all input values
-			totalInput += vtx.value
-		}
-		// ----- 5) Verify that the sum of output UTXOs is smaller (or equal to) than the sum of the source UTXOs
-		
-		// For each transaction in the outputs vector
-		for(var i = 0; i < tx.vout.length; i++) {
-			let vtx = tx.vout[i]
-			// Sum all values in output vector
-			totalOutput += vtx.value
-		}
-
-		// Compare the sum of output UTXOs to the source UTXOs
-		if (tx.vin.length == 0 && tx.id == 0){
-			console.log("No inputs, transaction will be accepted as genesis block")
-		}
-		else if (totalOutput > totalInput){
-			return false
-		}
-		
-
-		return true
 	}
 }
 
@@ -134,7 +45,7 @@ let tx_genesis = {
 	vin: [],
 	vout: [
 		{
-			value: 50,
+			value: 100,
 			pubkey: pubkeyA
 		}
 	]
@@ -145,7 +56,7 @@ txStore.insert(tx_genesis)
 // Alice: give 25 to Bob and Carlos
 let in1 = {
 	id: 0,
-	offset: 0,
+	offset: 0, // index in output vector
 	value: 50,
 	signature: 0
 }
@@ -175,7 +86,7 @@ txStore.insert(tx1)
 let in2 = {
 	id: 1,
 	offset: 1,
-	value: 25,
+	value: 15,
 	signature: 0
 }
 
@@ -189,7 +100,7 @@ let tx2 = {
 	vout: [
 		{
 			value: 15,
-			pubkey: pubkeyB
+			pubkey: pubkeyD
 		},
 		{
 			value: 10,
