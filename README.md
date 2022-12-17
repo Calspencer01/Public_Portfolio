@@ -10,7 +10,7 @@ Calvin Spencer's Portfolio
 - C code
 - Logisim
 ## Covid Tracker
-- Chloropleth
+- Choropleth
 <img width="1277" alt="Covid-tracker" src="https://user-images.githubusercontent.com/60395848/208214951-baa9f51f-9731-4559-b6ec-905a0359df9b.png">
 
 - Line charts
