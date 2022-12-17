@@ -12,9 +12,10 @@ Calvin Spencer's Portfolio
 ## Covid Tracker
 - Chloropleth
 <img width="1277" alt="Covid-tracker" src="https://user-images.githubusercontent.com/60395848/208214951-baa9f51f-9731-4559-b6ec-905a0359df9b.png">
-    - Line charts
-    
-    
+
+- Line charts
+<img width="1315" alt="Screen Shot 2022-12-16 at 8 11 34 PM" src="https://user-images.githubusercontent.com/60395848/208215508-4180f545-7b2f-46dd-980d-9de526418006.png">
+
 - Scatterplot
 <img width="1430" alt="Scatterplot" src="https://user-images.githubusercontent.com/60395848/208215411-f58cf7f8-fe45-4a92-860c-6d012e361a23.png">
 
