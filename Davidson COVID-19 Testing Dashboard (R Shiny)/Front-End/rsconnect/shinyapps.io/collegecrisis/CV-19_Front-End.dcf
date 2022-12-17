@@ -1,0 +1,12 @@
+name: CV-19_Front-End
+title: CV-19_Front-End
+username:
+account: collegecrisis
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2652172
+bundleId: 3543847
+url: https://collegecrisis.shinyapps.io/CV-19_Front-End/
+when: 1598060198.48452
+asMultiple: FALSE
+asStatic: FALSE

@@ -1,0 +1,21 @@
+{
+  "name": "utxo",
+  "version": "1.0.0",
+  "description": "My UTXO",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Me",
+  "license": "ISC",
+  "dependencies": {
+    "secp256k1": "^4.0.3"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "hardhat": "^2.10.2"
+  },
+  "directories": {
+    "test": "test"
+  }
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+.lineUpper_Yukon {
+    /* stroke-dasharray: 20, 2; */
+}
+.lineYukon_Costal_District{
+    /* stroke-dasharray: 4, 2; */
+}
+.lineLower_Yukon{
+    /* stroke-dasharray: 10,2; */
+}
+.lineYukon_Area_Total{
+    /* stroke-dasharray: ; */
+}
+.line {
+    fill: none;
+    /* stroke: #192c70; */
+    stroke-width: 2.5;
+}
+
+/* Style the dots by assigning a fill and stroke */
+.dot {
+    /* fill: #f2d14e; */
+    /* stroke: #fff; */
+    stroke-width: 1.5;
+}
+.title{
+    font-size: 50px;
+    font-family: Ludicia Bright, serif;
+    font-weight: 400;
+    margin-bottom: 5px;
+    text-align: center;
+    text-decoration: underline;
+}
+.section{
+    font-size: 38px;
+    font-family: Ludicia Bright, serif;
+    font-weight: 400;
+    margin-bottom: 5px;
+    text-align: center;
+    /* text-decoration: underline; */
+  }
+.subsection{
+font-size: 18px;
+font-family: Ludicia Bright, serif;
+font-weight: 500;
+margin-bottom: 5px;
+text-decoration: underline;
+}
+.par{
+margin-top: 5px;
+font-size: 18px;
+font-family: Ludicia Bright, serif;
+font-weight: 100;
+}
+.bordered{
+    border: 1px solid gray;
+  }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.textmargin{
+    margin-left: 200px;
+    margin-right: 200px;
+  }
+.vizmargin{
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+</style>
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="https://d3js.org/queue.v1.min.js"></script>
+<body>
+    <script src="data.js"></script>
+    
+    <img src="Banner.png" width="60%" class="center">
+    
+
+    <p class="title"> Yukon River Cultural Reproduction: A Data-Driven Approach</p>
+    
+    
+    <br><br>
+
+    <img src="Map.jpg" width="60%" class="center">
+    <br><br>
+    <p class="par textmargin">&emsp;&emsp;From the Bering Sea, through Alaska, to the Canadian Yukon runs the Yukon River, the third largest river in the United States. Coho, Chum, and Chinook (“King”) salmon all make yearly treks upstream to spawn. Along the way, they face predation from humans for a variety of reasons, mostly commercial industries that sell their omega-3-rich flesh to meet global demands, or sport anglers in it to experience the fight against such a muscular, powerful fish, built to travel thousands of miles against strong currents. However, the historical and arguably most important purpose these salmon serve, is to sustain the native communities of Alaskans that have depended upon these salmon runs for hundreds of generations. Today, more than 1,500 households along the Yukon river still practice subsistence salmon fishing. These communities have always relied on salmon as a food source, but now they are being restricted and their fishing seasons are legally shortened in order to conserve salmon populations.
+    </p>
+    
+    <br><br>
+
+    <div id="subs" class="bordered vizmargin">
+        <script src="subsistence.js"></script>
+    </div>
+    <br><br>
+    
+    <p class="par textmargin">&emsp;&emsp;Subsistence fishing is different from commercial fishing in that it is not for profit, it is for survival and the propagation of fishing strategies that have sustained these indigenous communities. The Yupik are a group of indigenous peoples in Alaska, many of whom live along the Yukon river. In their language, the word for fish is “nega”, which directly translates to “food”. They have a clear relationship and awareness of their role in their environment. Too much fishing can deplete the salmon populations, but too little would make their people go hungry. Finding the balance is an act that they have performed for hundreds, and in some places, thousands of years. In doing so, they developed extremely efficient means of catching salmon, and an understanding of how resilient and fragile salmon populations are. Two of the most common means of catching salmon among indigenous communities on the Yukon are fish wheels and gill nets.
+    </p>
+    <br><br>
+    <img src="ToolBanner.png" width="100%" class="center">
+    <br>
+    <p class="par textmargin">&emsp;&emsp;A fish wheel is a device powered by the current of the river, that rotates two cages into and out of the river, scooping out salmon into a collecting bin. Gill nets are set along the river to create an obstacle to entangle the salmon. 
+    </p>
+    <br>
+
+
+
+    <p class="par textmargin">&emsp;&emsp;Today, environmental concerns are threatening the practices of communities like the Yupik who depend on salmon for survival. Climate change is melting permafrost, which releases mercury into the Yukon. Human pollution in the Yukon watershed adds additional mercury and other toxins. These chemicals, when consumed, can cause birth defects such as faulty lungs, kidneys, or nervous system. For the consumer, it can cause mercury poisoning, which can be extremely harmful. While it is unclear which chemicals, if any, might be causing it, communities along the Yukon River are reporting significantly higher rates of cancers than surrounding areas. Some communities have even reported increased behavioral and physical abnormalities in the fish they catch. Contaminants released anywhere in the entire Yukon Watershed all end up in the river, disproportionately affecting those whose entire culture is centered around their relationship to the Yukon and the fish it supports
+    </p>
+    <br><br>
+    <img src="Watershed.jpg" width="60%" class="center">
+    <br><br>
+    <p class="par textmargin">&emsp;&emsp;With commercial fishing now responsible for a large portion of the yearly salmon harvest, the Alaskan Department of Fish and Game created the Board of Fisheries to set limits in order to conserve the salmon population. Commercial fishing is continuously monitored and given yearly limits that dictate how many salmon can be caught each year for commercial purposes, and for what period of the season. Commercial fishing can only begin once subsistence fishers are given time to collect their harvest. Some years, the subsistence harvest of certain species is restricted in order to prevent overfishing from harming the salmon populations. These restrictions impose structure that the indigenous communities must comply with. Ultimately, imposing on their culture in this way places them at risk of losing it entirely.
+    </p>
+    <p class="par textmargin">&emsp;&emsp;To make the regulation of salmon fishing fair for the native communities, the Board of Fisheries is designed to oversee 84 advisory committees through which community members can voice concerns or advice. However, the system is incredibly bureaucratic, requires a lot of time spent away from home, money spent on traveling, and compliance with a very western and modernized system. For example, proposals are submitted through either mail, email, or through the Board of Fisheries’ website. None of which are very reassuring that one’s voice is ever heard. These factors have severely deterred Yukon subsistence fishers from buying into their system.
+    </p>
+    <p class="par textmargin">&emsp;&emsp;The growth of indigenous fishers’ knowledge is derived from extensive iterations of trial and error. This kind of knowledge can only be gained through time, which is the staple of these communities’ relationships to the Yukon. Now, in a relatively short time span, they are being forced to comply with new regulations amidst environmental changes that are making the salmon more unpredictable and harder to catch. The opportunities for advising the decisions that regulate them are structured in ways that do not permit the transmission of traditional ecological knowledge. Natives explain that this knowledge cannot be learned without time participating in the experiences that derive it. Only through fishing can one learn what they learn.
+    </p>
+    <p class="par textmargin">&emsp;&emsp;Indigenous peoples are now at risk of losing this information that has been built and passed on for generations. If the knowledge being passed on from one’s ancestors was a chain, breaking one link is all it takes to be lost. Every year, Yukon subsistence fishers rely on salmon for their survival. They smoke the meat and preserve it to consume year-round. Without an adequate supply of fish, they are forced to buy into a capitalistic society that they are unprepared for. They must seek out sources of income to purchase food. This can disrupt one’s ability to spend the immense amounts of time and resources necessary to sustain tools such as fish wheels or gill nets. Moreover, the remoteness of Alaska means that prices are far higher than in cities in the United States. It can cost $15 for a gallon of milk and $20 for a pizza. Without sources of income or an adequate salmon harvest, many of these communities would starve.
+    </p>
+    <br><br>
+    <div id="coms" class="bordered vizmargin">
+        <script src="commercial.js"></script>
+    </div>
+    <br><br>
+    <p class="par textmargin">&emsp;&emsp;Because of environmental regulation issues on the Yukon River and its watershed, the communities such as the Yupik are at risk of losing their culture. The regulations placed on their subsistence fish harvest to preserve commercial industry impedes on their claim to the river’s salmon supply that has been present for decades. The increase in mercury in the Yukon makes it increasingly dangerous to rely on those salmon for nutrition. Through all of this, the structures implemented for the native communities to speak up and voice their concerns does not take into consideration the appropriate methods for this information to be conveyed. While Alaska prides itself on its ability to conserve its wild salmon population, it comes at the expense of those that rely on it. 
+    </p>
+    <br><br>
+    <p class="par textmargin">
+        <u>Bibliography</u>
+    </p>
+    <p class="par textmargin">Beutler, Hannah. “Threat to Salmon Imperils Alaska's Culture.” Climate Central, 14 July 2016, <br> www.climatecentral.org/news/when-salmon-disappear-alaskan-culture-may-follow-20522.<br> <br> 
+        “Environmental Consequences of the Gold Rush.” National Parks Service, U.S. Department of the Interior, 1 May 2018, <br> www.nps.gov/klgo/learn/historyculture/environmental-impacts.htm.<br> <br> 
+        Feidt, Annie. “Fishing, Cooking And A Yup'ik Upbringing Made Alaska's Health Commissioner.” NPR, NPR, 1 Sept. 2015, <br> www.npr.org/sections/health-shots/2015/09/01/436327115/fishing-cooking-and-a-yupik-upbringing-made-alaskas-health-commissioner.<br> <br> 
+        Fischer, Douglas. “Yukon River Dumping More Mercury Thanks to Climate Change.” Scientific American, Scientific American, 25 Oct. 2011, <br> www.scientificamerican.com/article/yukon-river-dumping-more-mercury-climate-change/.<br> <br> 
+        Milman, Oliver. “Alaska Indigenous People See Culture Slipping Away as Sea Ice Vanishes.” The Guardian, Guardian News and Media, 19 Dec. 2016, <br> www.theguardian.com/environment/2016/dec/19/alaska-sea-ice-vanishing-climate-change-indigenous-people.<br> <br> 
+        “Reducing Contamination in the Yukon River Watershed and Food Chain through Improved Monitoring, Assessment, and Coordination.” Commission for Environmental Cooperation, <br> www.cec.org/content/reducing-contamination-yukon-river-watershed-and-food-chain-through-improved-monitoring-assessment-and-coordination.<br> <br> 
+        “The Story Behind Your Seafood: Wild Yukon River Keta Salmon.” Fishpeople Seafood,<br> fishpeopleseafood.com/pages/track-your-pouch-yrs016.<br> <br> 
+        Walsey, V., Brewer, J. Managed out of existence: over-regulation of Indigenous subsistence fishing of the Yukon River. GeoJournal 83, 1169–1180 (2018).<br> https://doi.org/10.1007/s10708-018-9879-y<br> <br> <br> <br> 
+    </p>
+    
+
+
+</body>

@@ -1,0 +1,3 @@
+Source: https://www.adfg.alaska.gov/index.cfm?adfg=commercialbyfisherysalmon.salmon_grossearnings_byspecies
+
+Move text of restricted vs non restricted to adapt to not overlap on first

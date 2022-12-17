@@ -1,0 +1,59 @@
+.box.box-primary {
+    border-top-color: #000000;
+}
+
+.box.box-info {
+    border-top-color: #fff;
+    height: 25px;
+}
+
+a {
+    color: #000;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+    color: #000;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+
+.info-box {
+    box-shadow: 0 1px 1px rgba(0,0,0,0);
+    margin-bottom: 5px;
+    min-height: 50px;
+}
+
+.shiny-text-output {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 14px;
+    line-height: 0;
+    color: #333;
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: 100;
+    box-sizing: border-box;
+    padding-left: 5px;
+    font-style: oblique;
+}
+
+.col-sm-12{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font-size: 14px;
+    line-height: 1;
+    color: #333;
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+    font-weight: 400;
+    box-sizing: border-box;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    float: left;
+    width: 100%;
+}
+
+.alert-info, .bg-aqua, .callout.callout-info, .label-info, .modal-info .modal-body {
+    background-color: #ac1a2f!important;
+}
+

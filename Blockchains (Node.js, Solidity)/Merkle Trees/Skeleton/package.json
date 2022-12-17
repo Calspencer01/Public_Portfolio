@@ -1,0 +1,14 @@
+{
+  "name": "merkle-trees-skeleton",
+  "version": "1.0.0",
+  "description": "Merkle Tree Activity",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "You!",
+  "license": "ISC",
+  "dependencies": {
+    "circomlibjs": "^0.1.7"
+  }
+}

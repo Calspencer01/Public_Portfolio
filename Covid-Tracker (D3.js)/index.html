@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+  * {
+    font-family: sans-serif;
+  }
+  body {
+      font-family:"avenir next", Arial, sans-serif;
+      font-size: 14px;
+
+    }
+    .tickLine{
+      fill: black;
+      stroke: black;
+    }
+    .countryLine{
+      fill: "";
+    }
+    .tip{
+      font-size: 18px;
+      stroke-width: 1px;
+      text-anchor: left;
+    }
+
+    .axisLeft line{
+      stroke: #a10f15;
+    }
+    .axisLeft path{
+      stroke: #a10f15;
+    }
+    .axisLeft text{
+      stroke: #a10f15;
+    }
+
+    .axisBottom line{
+      stroke: #08519c;
+    }
+    .axisBottom path{
+      stroke: #08519c;
+    }
+    .axisBottom text{
+      stroke: #08519c;
+    }
+
+
+    .ticks {
+      font-size: 12px;
+    }
+
+    .track,
+    .track-inset,
+    .track-overlay {
+      stroke-linecap: round;
+    }
+
+    .track {
+      stroke: #000;
+      stroke-opacity: 0.3;
+      stroke-width: 10px;
+    }
+
+    .track-inset {
+      stroke: #ddd;
+      stroke-width: 8px;
+    }
+
+    .track-overlay {
+      pointer-events: stroke;
+      stroke-width: 50px;
+      stroke: transparent;
+      cursor: crosshair;
+    }
+
+    .handle {
+      fill: #fff;
+      stroke: #000;
+      stroke-opacity: 0.5;
+      stroke-width: 1.25px;
+    }
+  .details{
+    color:white;
+  }
+  .bordered{
+    border: 1px solid gray;
+  }
+  .textmargin{
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  .header{
+    font-size: 50px;
+    font-family: Ludicia Bright, serif;
+    text-align: left;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+  .subhead{
+    margin-top: 5px;
+    font-size: 15px;
+    font-family: Ludicia Bright, serif;
+  }
+  .section{
+    font-size: 38px;
+    font-family: Ludicia Bright, serif;
+    font-weight: 400;
+    margin-bottom: 5px;
+    text-align: center;
+    /* text-decoration: underline; */
+  }
+  .subsection{
+    font-size: 18px;
+    font-family: Ludicia Bright, serif;
+    font-weight: 500;
+    margin-bottom: 5px;
+    text-decoration: underline;
+  }
+  .par{
+    margin-top: 5px;
+    font-size: 18px;
+    font-family: Ludicia Bright, serif;
+    font-weight: 100;
+  }
+</style>
+
+
+
+<body>
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
+  <script src="https://d3js.org/queue.v1.min.js"></script>
+  <script src="https://d3js.org/topojson.v1.min.js"></script>
+  <script src="https://d3js.org/d3-color.v1.min.js"></script>
+  <script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+  <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/tabletop.js/1.5.1/tabletop.min.js'></script>
+
+  <script src="Scripts/DatesScript.js"></script>
+
+  <script src="Scripts/InitScript.js"></script>
+
+  <div id ="Header">
+    <p class="textmargin header"> COVID-19 Tracker
+      <p class="textmargin subhead">
+        A data visualization project by Calvin Spencer for CSC 362 with Dr Peck. <br> 
+        Visualizations made possible using <a href="https://d3js.org/" target="_blank" class="subhead">D3.js</a>  package. <br>
+        Data sourced from <a href="https://github.com/CSSEGISandData/COVID-19" target="_blank" class="subhead">Johns Hopkins University</a> <br>
+        Data shown runs from January 2020 - December 2020
+      </p>
+    </p>
+  </div>
+  <!--
+  <p class="section">
+    Introduction
+  </p>
+  <p class="textmargin par">
+   &emsp;At the start of 2020, an outbreak of an unknown virus began in Wuhan, China. By the end of March, over a million cases had been confirmed worldwide. This pandemic has affected the planet on a level unprecedented for this generation. My webpage serves as a dashboard to get an overview of how the Coronavirus causing the disease, COVID-19, has spread over time, starting from January 23rd, 2020. The purpose of this site is to provide a broad presentation of how extensive the virus is to date, and a record of how the outbreak has progressed in countries over the world. When making this website, I wondered “how might a person dropped into the world today without any context be informed about the progression of Coronavirus?” I hoped I could create a product that would summarize the severity and magnitude of this pandemic for someone without any prior knowledge. Additionally, I questioned how the number of recoveries and the number of deaths varied in each country when dealing with the pandemic. I figured this question would speak to how the country has responded to the outbreak, since countries with more recoveries and less deaths likely used better strategies to address the crisis. 
+   <br>&emsp;To visualize this data, I created three visualizations: A choropleth map of the virus’ progression over time, a scatter plot that plots the mortality rate due to COVID-19 by country, and bar graphs of how the disease has affected each state in the United States, the country with the most confirmed cases to date. In these visualizations, I break the data down into consistent categories based on the data supplied by Johns Hopkins University: Confirmed total cases, active cases, recoveries from the disease, and deaths from the disease. The number of active cases + recoveries + deaths sum to the total number of confirmed cases at each data point. I aimed to show how the pandemic spread not just by the overall number of cases, but how the number of recoveries and deaths varied over time and by location (country or state). 
+   <br>&emsp;In the choropleth map, the user can view specific dates as well as an animation of the spread of COVID-19 over time, providing what I hoped to be an extensive yet detailed visualization of the data. Furthermore, by clicking on a country or the worldwide button, the line graph shows for that specific country how the number of active cases, recoveries, and deaths changed over time. In the scatter plot, one can view the mortality rate by country, and by clicking on one, see how that progressed over time. By comparing these mortality graphs to each governments’ responses, it is possible to see which policies might have had certain effects on the survival rate within the country. In the bar graphs, people can see how the virus’ spread varied in each state in the United States. This visualization does not use time series data, but instead shows a live breakdown of how states have been affected so far with the most recently updated data from Johns Hopkins, including the number of people tested by state.  
+  </p>
+
+  <p class="section">
+    Data
+  </p>
+  <p class="textmargin par">
+    &emsp;The majority of the data being visualized is from the Johns Hopkins COVID-19 github repository. My choropleth map uses the time series files for confirmed cases, recoveries, and deaths by country. These three elements are the extent of all the time series data; there is no time series record of testing or other factors which would have provided additional insights if possible. The scatter plot uses this data filtered by the most recent day to show all the countries live. When a country is clicked, a path is shown using the time series data to display how the country has “traveled” over time across the graph. Furthermore, for the bar graphs, I used the US daily reports files which are generally added to the repository the day after. The same goes for the time series files, which are only updated once the previous day is over. Also, some days, with the US daily reports in particular, the files are added later than usual, and this caused errors in my program. I had to account for this by only retrieving the most recent file that was available if the previous day was not yet posted. 
+    <br> &emsp; It is important to keep in mind that this data is far from the whole story. The outbreak caught most countries far less prepared than necessary, in particular with testing. It is likely that a large portion, possibly even a majority of people who contract Coronavirus are never tested and are never added to these “official” totals seen in data sources such as Johns Hopkins. Even patients who exhibit symptoms of COVID-19 and die almost certainly due to the Coronavirus would not be added to these datasets because they never received the positive test result. In addition to the lack of available tests, there will always be false positives and false negatives in testing which can create slightly inaccurate data. 
+  </p>
+  
+
+  
+  <p class="section">
+    Visualizations
+  </p>
+-->
+
+  <p class="textmargin subsection">
+    Global Animated Choropleth
+  </p>
+  <p class="textmargin par">
+    - Color scales show absolute number of cases.<br>
+    - Click on a country to view individual time series chart. <br>
+    - Click "See Aggregate Data" to show worldwide time series chart. <br>
+    - Hover over a country to view individual data. <br>
+    - Drag time scale on bottom or press "Play" to view progression over time.
+  </p>
+  <!-- 
+  <p class="textmargin par">
+    &emsp; When considering how the outbreak spread over time, the animated choropleth map displays the available data by each day since 1/23/2020. The slider at the bottom of the map can be moved to show the data at each date. Also, the play button can be clicked to view an animation of how the virus has spread over time. The four colored buttons allow the user to change which data is being displayed, confirmed cases, active cases, recoveries, or deaths, for all of the countries. The user can click on one of the countries to see a stacked area graph of these data points. While there is no color for confirmed cases, the active cases, recoveries, and deaths add up to the number of confirmed cases, so the top of all these areas is the number of confirmed cases. I was considering putting the deaths below the X axis, but I preferred having the sum of the area of these three values (active, recovered, dead) add up to the number of confirmed cases. The exit button can be used to return to the world map. Lastly, the worldwide cases button can be used to see the stacked line graph for the world’s data, not just in one specific country.
+    <br> &emsp; 
+    This visualization focuses on the effect of time on the progression of the virus. It is interesting to watch China’s active cases because it begins as the most infected country then fades away as the virus spreads elsewhere and more strict measures are taken to control the outbreak within the country. Meanwhile in countries like the US and Italy at the beginning of April, active cases begin to rise as the number of active cases in China is already decreasing, presumably due to a difference in tactics to address pandemic, such as social distancing.
+  </p>
+   -->
+  <div id="mapgroup" class="bordered">
+    <div id="mapviz">
+      <script src="Scripts/MapScript.js"></script>
+    </div>
+
+    <div id="slider"></div>
+    <script src="Scripts/SliderScript.js"></script>
+
+    <script src="Scripts/LineScript.js"></script>
+    <div id="lineviz"></div>
+  </div>
+  <br>
+  
+  <p class="textmargin subsection">
+    Country Scatter Plot
+  </p>
+  <p class="textmargin par">
+    - Data points display flags to indicate country.<br>
+    - Hover over a country to view time series progression. <br>
+    - Tooltip background colors use color scale to reinforce mortality rate. <br>
+    - X-axis indicates number of confirmed COVID-19 cases, Y-axis indicates number of deaths caused by COVID-19.
+  </p>
+  <!--
+  <p class="textmargin par">
+    &emsp; While the choropleth map provides a perspective on the data by how it has changed over time, this scatterplot emphasizes how the different types of data relate to one another. In other words, how do countries with similar numbers of confirmed cases vary in their number of deaths? Sweden and Ireland both have relatively similar numbers of confirmed cases. However, Sweden has nearly twice the number of deaths that Ireland has. This can be seen in the scatter plot because Sweden is higher up on the page than Ireland. Higher mortality rates are apparent in this way, which speaks to how each country has dealt with the crisis.
+    <br>&emsp; In interacting with the scatter plot, the user can select a country and view it’s path over time. The gray line that appears represents how the selected country has moved across the plot as its number of confirmed cases increases. Countries with steeper lines accumulated more deaths at a faster rate than countries with more gradual lines. While hovering over a country, countries’ data is shown in the top left corner of the plot. The color scale used for this changes depending on the mortality rate (blue = lower rate, red = higher rate). 
+  </p>
+-->
+  <div id="scatterGroup"class="bordered">
+    <script src="Scripts/ScatterScript.js"></script>
+    <div id="scatter"></div>
+    <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+  </div>
+  <br>
+  <!--
+  <p class="textmargin subsection">
+    United States Bar Graphs
+  </p>
+  <p class="textmargin par">
+    &emsp;This radial bar graph is a current snapshot of how COVID-19 is affecting the United States during the present day. There are four pieces of data you can interact with and choose to display. The light blue bars represent the number of tests performed per state. The other three pieces of data, number of active cases, recoveries, and deaths, stack into a stacked bar chart. If the number of tests is shown with other data, it does not stack up because the number of tests is independent of these other three factors, whereas those three factors add up to the total number of confirmed cases. 
+    <br>&emsp;You can press the buttons in the middle of the radial bar graph to “turn on/off” which pieces of data are shown. Also, hovering over the bar graph or label of a state will show the exact values for the data being visualized (i.e. number of tests, active cases, etc.). Lastly, clicking on the state’s bars will open a “person chart” that represents the outcomes per 1000 tests performed in each state.
+    <br>&emsp;&emsp; - The red icons represent people who tested positive and died
+    <br>&emsp;&emsp; - The green icons represent people who tested positive and recovered
+    <br>&emsp;&emsp; - The purple icons represent people who tested positive and are still infected
+    <br>&emsp;&emsp; - The teal icons represent negative tests
+    <br>1000 icons of people are shown, representing 100% of all tests. Thus, each icon represents 0.1% of all people who are tested for the disease.
+  </p>
+
+  <div id="radialGroup"class="bordered">
+    <script src="Scripts/RadialBarScript.js"></script>
+    <script src="Resources/d3-scale-radial.js"></script>
+    <script src="Scripts/PersonScript.js"></script>
+    <div id="radialviz"></div>
+  </div>
+  
+
+
+  <p class="section">
+    Discussion
+  </p>
+  <p class="textmargin par">
+    &emsp;These visualizations focus on three different aspects of the outbreak: the progression over time worldwide, the mortality rate worldwide, and breakdown in the United States. In the choropleth map, one can see how countries like China went through their more severe phase, and (assuming their data is accurate) is now declining in active cases, represented by the changing color scale during the animation. Comparing the number of confirmed cases in China to a nearby country, Taiwan, reveals information about how prepared these countries were for the outbreak. China was more susceptible to the spread of Coronavirus while Taiwan, which is very close to China, has far fewer cases in comparison (83,970 vs 439 as of 5/6/20). As it turns out, Taiwan has many precautions in place to promote social distancing and tactics learned from the SARS outbreaks which are now reimplemented, leading to these better outcomes than China.<br>
+    &emsp;In the scatter plot, the user can identify which countries experienced more deaths per confirmed case. The aforementioned example of Sweden vs Ireland is particularly telling because there are more than twice as many deaths in Sweden than in Ireland even though they have very similar numbers of cases. So by finding countries higher/lower than the rest on the plot, it is possible to identify which countries have higher/lower mortality rates. In this example,  Sweden is known for having implemented fewer restrictions that were overall less strict in enforcing social distancing. Their approach to containing the outbreak might have contributed to their abnormally high mortality rate.<br>
+    &emsp;The radial bar graph shows how some states have greater access to tests, and this does not reflect their necessity based on the number of cases or deaths. For example, California has performed the 2nd most tests, behind New York. New Jersey is 7th out of all states for testing. However, New Jersey is the state 2nd highest in the number of active cases and in the number of deaths, while California is 5th and 8th, respectively. These comparisons show what condition each state is in and how much access they had to testing resources.
+  </p>
+
+  <p class="section">
+    Limitations
+  </p>
+  <p class="textmargin par">
+    &emsp;The limitations of this tracker stem mostly from the lack of accurate data. As the outbreak spread rapidly, it took countries and their governments mostly by surprise. The tests used to confirm the cases of COVID-19 are new and being produced rapidly, before knowledge about specificity and sensitivity are known. This means that accurate numbers of false positives and false negatives do not exist yet. The FDA removed standards on these tests in response to the outbreak, so in the United States in particular, the quality of tests are very uncertain. Even with the use of antibody tests, whether they are made positive by the coronavirus that causes the common cold or COVID-19 is unknown, which could result in a very high rate of false positives, further skewing data. Inaccuracies in testing, combined with the lack of available tests, means that the data being presented is incomplete and far from perfect. If random testing is implemented, however, this would provide a far better picture of how many people are infected because currently, people who are asymptomatic are not ever tested. However, there are unexpected benefits of these issues. In general, countries on the scatter plot that are outliers, such as Nicaragua, indicate that there is an issue with testing. So while the number of confirmed cases may not be accurate, the abnormally high mortality rate (5/16) shows that there is probably a lack of testing and still has some value as a data point. Additionally, there was no time series data available on testing, like there was for confirmed cases, deaths, and recoveries. If this was available, the choropleth map could have been a lot more informative and interesting. 
+
+  </p>
+
+  <p class="section">
+    Conclusion
+  </p>
+  <p class="textmargin par">
+    &emsp;This tracker captures the goals I had in mind for this project. I really enjoyed the entire experience of making this webpage. I spent a lot of time on this project, mostly because once I got an idea for something new, like the line chart for each country and the person chart for each state, I got too excited to do anything else except implement it in my down time. I am proud that I was able to implement the level of interactivity I was aiming for so that this set of visualizations would be useful in searching for data at specific times and locations. I found that the more I worked on the project, the more I learned about the topic and what was going on in the world regarding this outbreak. Also, when testing becomes more widespread and random testing is implemented creating more accurate data I think it would be cool to add data per capita. Currently the per capita data might be more misleading than presenting the absolute numbers of confirmed cases because per capita implies to me that the data is more whole than it actually is. I am excited to see how the data morphs as time progresses and I hope that if more variables become available, like the testing time series data, I can add it to my tracker to gain more insights.
+  </p>
+  <br>
+  -->
+</body>

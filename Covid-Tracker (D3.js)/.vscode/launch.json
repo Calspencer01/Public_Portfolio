@@ -1,0 +1,18 @@
+{
+    "version": "0.1.0",
+    "configurations": [
+        {
+            "name": "Launch localhost",
+            "type": "chrome",
+            "request": "launch",
+            "url": "http://localhost:7000/CoronaPage.html",
+            "webRoot": "${file}"
+        },
+        {
+            "name": "Launch Page",
+            "type": "chrome",
+            "request": "launch",
+            "file": "${workspaceFolder}/CoronaPage.html"
+        },
+    ]
+}
