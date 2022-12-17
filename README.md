@@ -13,7 +13,11 @@ Calvin Spencer's Portfolio
 - Chloropleth
 <img width="1277" alt="Covid-tracker" src="https://user-images.githubusercontent.com/60395848/208214951-baa9f51f-9731-4559-b6ec-905a0359df9b.png">
     - Line charts
+    
+    
 - Scatterplot
+<img width="1430" alt="Scatterplot" src="https://user-images.githubusercontent.com/60395848/208215411-f58cf7f8-fe45-4a92-860c-6d012e361a23.png">
+
 ## Data Structures
 - Class activities
 - QuickSort
@@ -30,11 +34,15 @@ Calvin Spencer's Portfolio
         - Boggle
         - Fibonacci
         - PlayingCard
+
+
 ## Database Systems
 - BPTree
 - Data Importer
 - Final Project (SQL + R Shiny)
 - SQL Databases 
+
+
 ## COVID-19 Testing Dashboard
 <img width="1414" alt="CV-19 dashboard" src="https://user-images.githubusercontent.com/60395848/208214964-f2a253e3-9890-4c98-a7a1-06a2f3f4e8e9.png">
 
