@@ -1,4 +1,4 @@
-# Calvin Spencer's Portfolio
+# Table of Contents
 
 ### Blockchains (Node.js, Solidity)
 - Unspent Transaction Outputs (UTXOs)
